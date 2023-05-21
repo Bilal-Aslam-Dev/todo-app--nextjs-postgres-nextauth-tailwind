@@ -13,7 +13,7 @@ const SignInScreen: FC = () => {
         <SignInForm />
         {/* GOOGLE SIGNIN */}
         <GoogleSignIn />
-        <div className='flex items-center justify-center text-xs text-gray-700 mt-3'>Don{`'`}t have an account? <Link href="/sign-up" className='underline font-medium ml-1'>Sign Up now</Link> </div>
+        <div className='flex items-center justify-center text-xs text-gray-700 mt-3'>Don{`'`}t have an account? <Link href="/sign-up" className='underline font-medium ml-1'>Sign Up</Link> </div>
       </div>
     </div>
   )

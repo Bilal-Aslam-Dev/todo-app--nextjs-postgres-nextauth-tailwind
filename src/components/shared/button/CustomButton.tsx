@@ -6,7 +6,8 @@ interface ButtonType {
   onClick?: () => void
   className?: string | null
   type?: 'button' | 'submit' | 'reset'
-  disabled?: boolean
+  disabled?: boolean,
+  noFocus?: boolean
 }
 
 const CustomButton: FC<ButtonType> = ({
@@ -15,9 +16,11 @@ const CustomButton: FC<ButtonType> = ({
   className,
   type,
   disabled,
+  noFocus
 }) => {
   return (
     <Button
+      tabIndex={noFocus === true ? -1 : undefined}
       disabled={disabled ?? false}
       type={type ?? 'button'}
       onClick={onClick}

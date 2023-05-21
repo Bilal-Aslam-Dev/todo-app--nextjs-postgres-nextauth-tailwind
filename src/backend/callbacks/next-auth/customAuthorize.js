@@ -8,8 +8,6 @@ const customAuthorize = async (credentials) => {
       where: { email },
     });
     
-    console.log(user.name)
-      
     if (!user) {
       throw new Error('Invalid credentials');
     }
@@ -25,7 +23,6 @@ const customAuthorize = async (credentials) => {
       name: user.name,
       user: {
         userId: user.id,
-        name: user.name
       },
     };
 

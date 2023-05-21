@@ -2,9 +2,9 @@ import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 import Credentials from 'next-auth/providers/credentials'
 
-import sessionCallback from '@/backend/callbacks/next-auth/sessionCallback'
-import signInCallback from '@/backend/callbacks/next-auth/signInCallback'
+import googleAuthorize from '@/backend/callbacks/next-auth/googleAuthorize'
 import customAuthorize from '@/backend/callbacks/next-auth/customAuthorize'
+import signInCallback from '@/backend/callbacks/next-auth/signInCallback'
 
 const options = {
   providers: [
@@ -14,14 +14,14 @@ const options = {
     }),
     Credentials({
       credentials: {
-        username: { label: "Email", type: "email", placeholder: "email@example.com" },
+        username: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" }
       },
       authorize: customAuthorize,
     })
   ],
   callbacks: {
-    session: sessionCallback,
+    session: googleAuthorize,
     signIn: signInCallback,
   },
   database: process.env.DATABASE_URL,

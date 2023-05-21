@@ -19,14 +19,14 @@ const Popup: FC<PopupTypes> = ({ open, handleOpen, children, size }) => {
   return (
     <>
       <Dialog
-        className={`w-full min-w-auto ${
-          size ?? 'max-w-[90%] sm:max-w-[500px]'
+        className={`w-full min-w-0 ${
+          size ?? 'max-w-[96%] sm:max-w-[500px]'
         }`}
         open={open}
         handler={handleOpen}
         onClick={handleClickInside}
       >
-        <DialogBody>
+        <DialogBody className='sm:p-4 py-4 px-2.5'>
           <div className="relative w-full">
             <CustomButton className="flex ml-auto" onClick={handleOpen}>
               <CloseIcon className="w-5 text-gray-600" strokeWidth={3} />

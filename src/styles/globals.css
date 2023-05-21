@@ -7,6 +7,11 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+*:active {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important; /* Additional property for iOS devices */
+}
 
 body {
   @apply flex flex-col items-center overflow-x-hidden;

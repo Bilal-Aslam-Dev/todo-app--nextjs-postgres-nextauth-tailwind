@@ -47,9 +47,10 @@ const AddTodo: FC = () => {
             inpName="todo"
             type="text"
             errorName="todo"
+            placeholder='✏️...'
           />
           <button
-            className="bg-[#99d8e1] hover:bg-cyan-300 transition-all py-3 mt-5 rounded-lg w-full text-white text-sm font-medium"
+            className="bg-[#99d8e1] hover:bg-cyan-300 transition-all py-2.5 sm:py-3 mt-5 rounded-lg w-full text-white text-sm font-medium"
             type="submit"
           >
             Add

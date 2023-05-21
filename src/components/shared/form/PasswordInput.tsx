@@ -8,7 +8,7 @@ import { EyeIcon, EyeSlash } from '@/assets/icons'
 interface IPType {
   inpName: string
   errorName: string
-  placeholder?: string 
+  placeholder?: string
 }
 
 const PasswordInput: FC<IPType> = ({ inpName, errorName, placeholder }) => {
@@ -31,7 +31,7 @@ const PasswordInput: FC<IPType> = ({ inpName, errorName, placeholder }) => {
           }}
           className="absolute right-3 top-[50%] translate-y-[-50%]"
         >
-          <CustomButton>
+          <CustomButton noFocus={true}>
             <Icon className=" w-5 cursor-pointer stroke-black " />
           </CustomButton>
         </div>
